@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 
 from django.http import HttpResponse, JsonResponse
@@ -18,7 +19,7 @@ def list(request):
         team = List.objects.all()
 
         serializer = TeamSerializer(team, many=True)
-        print( serializer.data )
+
         return JsonResponse(serializer.data,safe=False)
 
     elif request.method == 'POST':
