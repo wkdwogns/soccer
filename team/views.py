@@ -6,8 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from team.models import List
 from team.serializers import TeamSerializer
+from rest_framework import viewsets
 
 # Create your views here.
+class TeamViewSet(viewsets.ModelViewSet):
+    queryset = List.objects.all()
+    serializer_class = TeamSerializer
 
 @csrf_exempt
 def list(request):

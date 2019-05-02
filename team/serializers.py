@@ -1,4 +1,4 @@
-from rest_framework import serializers
+from rest_framework import serializers,viewsets
 from team.models import List
 
 
@@ -14,3 +14,6 @@ class TeamSerializer(serializers.Serializer):
         Create and return a new `Snippet` instance, given the validated data.
         """
         return List.objects.create(**validated_data)
+
+    class meta:
+        ordering='creDt'
