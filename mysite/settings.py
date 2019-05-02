@@ -47,7 +47,6 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.IsAdminUser',
     ],
     'PAGE_SIZE': 10,
-    'UNICODE_JSON':True
 }
 
 MIDDLEWARE = [

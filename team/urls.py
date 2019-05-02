@@ -8,5 +8,5 @@ router = routers.DefaultRouter()
 router.register(r'', views.TeamViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    path('', include(router.urls)),
 ]
