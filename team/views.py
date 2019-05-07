@@ -9,3 +9,5 @@ from rest_framework import viewsets
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = List.objects.all()
     serializer_class = TeamSerializer
+    search_fields = ('name')    
+
