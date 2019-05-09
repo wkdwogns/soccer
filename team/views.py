@@ -5,9 +5,13 @@ from team.models import List
 from team.serializers import TeamSerializer
 from rest_framework import viewsets
 
+from rest_framework import filters
+
 # Create your views here.
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = List.objects.all()
     serializer_class = TeamSerializer
-    search_fields = ('name')    
+    filter_backends = (filters.SearchFilter,filters.OrderingFilter,)
+    search_fields = ('name','career')
+    ordering_fields = ('creDt',)
 
