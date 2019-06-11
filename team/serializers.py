@@ -1,6 +1,6 @@
 from rest_framework import serializers
+
 from team.models import List
-from django.utils import timezone
 
 
 class TeamSerializer(serializers.ModelSerializer): 

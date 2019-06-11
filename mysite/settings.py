@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'team.apps.TeamConfig',
+    'players.apps.PlayersConfig',
     'rest_framework',
     'corsheaders',
 ]
