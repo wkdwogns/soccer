@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'team.apps.TeamConfig',
     'player.apps.PlayerConfig',
+    'gameRecord.apps.GamerecordConfig',
+    'trainingProgram.apps.TrainingprogramConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'allauth',
