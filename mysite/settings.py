@@ -54,10 +54,10 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.IsAdminUser',
-        #'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
         # 'rest_framework.authentication.BasicAuthentication',
     ),
@@ -78,12 +78,12 @@ MIDDLEWARE = [
     
 ]
 
-#SITE_ID = 1
-#ACCOUNT_EMAIL_REQUIRED = False
+SITE_ID = 1
+ACCOUNT_EMAIL_REQUIRED = False
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-#ACCOUNT_EMAIL_VERIFICATION = None
-#REST_USE_JWT = True
-#ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_EMAIL_VERIFICATION = None
+REST_USE_JWT = True
+ACCOUNT_LOGOUT_ON_GET = True
 
 
 CORS_ORIGIN_ALLOW_ALL = True
