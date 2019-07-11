@@ -10,4 +10,5 @@ class List(models.Model):
 	weight = models.CharField(max_length=30,null=True)
 	position = models.CharField(max_length=30,null=True)
 	speed = models.CharField(max_length=10,null=True)
+	creId = models.IntegerField(null=True)
 	creDt = models.DateTimeField(auto_now=True,null=True)

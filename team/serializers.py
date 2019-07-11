@@ -4,13 +4,10 @@ from team.models import List
 
 
 class TeamSerializer(serializers.ModelSerializer): 
-    # id = serializers.IntegerField(read_only=True)
-    # name = serializers.CharField(max_length=50)
-    # career = serializers.CharField(style={'base_template': 'textarea.html'})
-    # creDt = serializers.DateTimeField()
+
     class Meta:
         model = List
-        fields = ('id','name','career')
+        fields = ('id','name','career','creId',)
 
 
     def create(self, validated_data):
