@@ -14,6 +14,10 @@ class TeamSerializer(serializers.ModelSerializer):
         """
         Create and return a new `List` instance, given the validated data.
         """
+        user =  self.context['request'].user
+        print(user)
+        print(user.pk)
+        validated_data['creId'] = user.pk
         return List.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
