@@ -23,4 +23,6 @@ class TeamViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def get_myTeam(self, requests):
         pk = requests.user.pk
-        return Response(List.objects.filter(creId=pk))
+        rs = List.objects.filter(creId=pk)
+        serializer = TeamSerializer(rs,many=True)
+        return Response(serializer.data)
